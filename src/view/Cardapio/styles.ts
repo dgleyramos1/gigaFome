@@ -22,18 +22,33 @@ export const Container = styled.div`
         }
     }
     section {
-        height: 100vh;
-        width: 100%;
+        height: auto;
+        width: 100vw;
         display: flex;
-        justify-content: space-around;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin: auto;
 
         .product-content{
+            width: 350px;
+            height: auto;
             display: grid;
             text-align: center;
+            justify-content: center;
+            align-items: center;
             height: auto;
             border-radius: 12px;
             padding: 12px;
             font-family: Roboto Condensed;
+
+
+            img{
+                width: 250px;
+                height: auto;
+            }
+        }
+        .priceText{
+            font-size: 24px;
         }
     }
   .contentBut { 

@@ -57,7 +57,7 @@ const Cardapio: React.FC = () => {
             <section>
               { data.map( (prod, index) => (
                 <div className="product-content" key={prod.id}>
-                  <span className="nome">{prod.name}</span>
+                  <span className="priceText">{prod.name}</span>
                   <img src={prod.photo} alt="x-salada" />
                   <span className="priceText">R${prod.price}</span>
                   <button onClick={ () => handleCart(index)} className="contentBut">

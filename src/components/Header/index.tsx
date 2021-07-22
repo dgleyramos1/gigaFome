@@ -1,19 +1,20 @@
 import React from 'react';
 import { Container } from './styles';
+import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
   return(
       <Container>
           <div className="list">
                   <div className="menu">
-                    <a href="#home">
-                        <li>Home</li>
-                    </a>
+                        <li>
+                          <Link to="/">Home</Link>
+                        </li>
                   </div>
                   <div className="menu" >
-                    <a href="#cardapio">
-                        <li>Cardápio</li>
-                    </a>
+                      <li>
+                        <Link to="/cardapio">Cardápio</Link>
+                      </li>
                   </div>
           </div>          
       </Container>

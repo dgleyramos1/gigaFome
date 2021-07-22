@@ -1,12 +1,14 @@
 import React from 'react';
-import { Container } from './style';
+import { Container } from './styles';
 import Burguer from '../../assert/images/burguer1.png';
 import ButtonCardapio from '../../components/Buttons/Cardapio';
 import Footer from '../../components/Footer';
+import Header from '../../components/Header';
 
 const Home: React.FC = () => {
   return(
-      <Container>
+      <Container id="home">
+          <Header/>
           <section className="section">
              <div className="content-one">
                 <span  className="sextouText">#SEXTOU!</span>

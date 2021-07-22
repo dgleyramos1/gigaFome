@@ -9,7 +9,11 @@ export const Container = styled.div`
         top:0px;
         border-radius: 17px;
         cursor: pointer;
-        box-shadow:5px 8px 4px rgba(0, 0, 0, 0.49000000953674316);
+        box-shadow:0 5px 4px rgba(0, 0, 0, 0.49000000953674316);
+        transition: 10ms;
+    }
+    .contentBut:hover{
+        box-shadow:0 8px 9px rgba(255, 255, 255, 0.5);
     }
     .contentText { 
         background-image:linear-gradient(0deg, rgba(225.00000178813934, 179.000004529953, 75.00000312924385, 1) 0%,rgba(184.00000423192978, 219.0000021457672, 54.00000058114529, 1) 100%) ;
@@ -23,7 +27,7 @@ export const Container = styled.div`
         height:35px;
         left:0px;
         top:0px;
-        font-family:Roboto;
+        font-family: Roboto Condensed;
         text-align:center;
         font-size:24px;
         letter-spacing:0;

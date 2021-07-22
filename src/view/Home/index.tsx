@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from './styles';
-import Burguer from '../../assert/images/burguer1.png';
+import Burguer from '../../assert/images/x-infarto.png';
 import ButtonCardapio from '../../components/Buttons/Cardapio';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';

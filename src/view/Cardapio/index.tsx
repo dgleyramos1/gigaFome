@@ -50,7 +50,7 @@ const Cardapio: React.FC = () => {
           <Header/>
             <div className="nav">
               <div className="cart">
-                <img src={Cart} alt="shopcart" width="50px" height="auto" />
+                <img src={Cart} alt="shopcart" />
                 <span>( {cart.length} ) - Itens</span>
               </div>
             </div>

@@ -4,21 +4,23 @@ import bg from '../../assert/images/bg.jpg';
 
 export const Container = styled.div`
     width: 100vw;
-    height: auto;    
-    background-image: url(${bg});
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    height: auto; 
 
     .nav{
         display: flex;
-        align-items: right;
-        justify-content: center;
-        text-align: right;
-
-        .cart{
-        display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
+        text-align: center;
+        
+        .cart{
+            display: flex;
+            justify-content: center;
+            align-items: center;         
+
+            img{
+                width: 100px;
+                height: auto;
+            }
         }
     }
     section {
@@ -26,25 +28,29 @@ export const Container = styled.div`
         width: 100vw;
         display: flex;
         flex-flow: row wrap;
-        justify-content: center;
+        justify-content: space-evenly;
+        gap: 15px;
         margin: auto;
 
-        .product-content{
+        .product-content{            
+            padding: 10px;
             width: 350px;
-            height: auto;
-            display: grid;
+            display: flex;
+            flex-direction: column;
             text-align: center;
-            justify-content: center;
+            justify-content: space-evenly;
             align-items: center;
-            height: auto;
-            border-radius: 12px;
-            padding: 12px;
+            border: 1px solid black;
+            border-radius: 30px;
             font-family: Roboto Condensed;
-
+            background-image: url(${bg});
+            background-repeat: no-repeat;
+            background-attachment: fixed;
 
             img{
                 width: 250px;
-                height: auto;
+                height: 200px;
+                margin: 0;
             }
         }
         .priceText{
@@ -61,6 +67,7 @@ export const Container = styled.div`
         cursor: pointer;
         box-shadow:0 5px 4px rgba(0, 0, 0, 0.49000000953674316);
         transition: 10ms;
+        margin-bottom: 5px;
     }
     .contentBut:hover{
         box-shadow:0 8px 9px rgba(255, 255, 255, 0.5);

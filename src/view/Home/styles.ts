@@ -3,17 +3,15 @@ import bg from '../../assert/images/bg.jpg';
 
 export const Container = styled.div`
     width: 100vw;
-    height: 100vh;
-    background-image: url(${bg});
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    height: auto;
 
 
     .section{
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
+        flex-flow: wrap;
+        width: 100vw;
         height: 85vh;
         margin: auto;
     }
@@ -23,7 +21,8 @@ export const Container = styled.div`
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        width: 100%;
+        width: 50%;
+        min-width: 250px;
         height: auto;
     }
 
@@ -31,6 +30,7 @@ export const Container = styled.div`
         transform: rotate(-9.103151351662632deg);
         color: rgba(0, 0, 0, 1);
         width: 350px;
+        min-width: 150px;
         height: auto;
         font-family: Roboto Condensed;
         text-align: left;
@@ -40,7 +40,8 @@ export const Container = styled.div`
     }
     .chamadaText { 
         color:rgba(0, 0, 0, 1);
-        width: 450px;
+        width: 350px;
+
         height:auto;
         font-family:Roboto Condensed;
         text-align:center;
@@ -62,7 +63,8 @@ export const Container = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 80%;
+        width: 50%;
+        min-width: 250px;
         height: auto;
         margin: auto;
     }
@@ -71,6 +73,16 @@ export const Container = styled.div`
         min-width: 320px;
         height:auto;
     }
-
+@media(max-width: 900px){
+    .section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width: 100vw;
+        margin: auto;
+    }
+}
 
 `

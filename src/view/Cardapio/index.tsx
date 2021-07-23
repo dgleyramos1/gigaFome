@@ -14,18 +14,12 @@ interface IProduct{
   price: number;
 }
 
-interface Test {
-  cart: IProduct[]
-}
-
-
-
-
 
 const Cardapio: React.FC = () => {
 
   const [ data, setData ] = useState<IProduct[]>([]);
   const [ cart, setCart ] = useState<IProduct[]>([]);
+  const [ shop, setShop ] = useState<IProduct[]>([]);
   
 
   useEffect(() =>{
@@ -40,9 +34,21 @@ const Cardapio: React.FC = () => {
     let product = data[index]
     let push: any = [...cart, cart.push(product)]
     setCart(push)
+    setShop(push)
     const productStore = JSON.stringify(cart);
-    localStorage.setItem('@cart', productStore)
+    localStorage.setItem('@cart', productStore);
   }
+
+  const handleCadastro = (value: any) => {
+
+
+  }
+   function cadastro(){
+     let paragrafo = document.createElement("p")
+     paragrafo.innerHTML = "Dados cadastrados"
+     document.getElementById("texCadastro")?.appendChild(paragrafo)
+   }
+
 
 
   return(
@@ -63,9 +69,32 @@ const Cardapio: React.FC = () => {
                   <button onClick={ () => handleCart(index)} className="contentBut">
                       <span className="contentText">Adicionar ao Carrinho</span>
                   </button>
-                </div>
+                </div>     
               ))}
-            </section>            
+            </section>
+            <div id="carrinho">
+                <form action="">
+                  <h2>Cadastro</h2>
+
+                  <label htmlFor="name">Name</label>
+                  <input name="nome" placeholder="digite seu Nome aqui" type="text" />
+
+                  <label htmlFor="email">E-mail</label>
+                  <input type="email" name="email" placeholder="Digite seu e-mail" />
+
+                  <label htmlFor="endereco">Endereço</label>
+                  <input id="endereco" type="text" placeholder="Digite seu endereço" />
+
+                  <button  className="contentBut">
+                      <span className="contentText">Cadastrar</span>
+                  </button>                     
+                      
+                </form>
+                
+              <div>
+                    <p id="texCadastro"></p>
+              </div>                         
+            </div>            
           <Footer/>
       </Container>      
   );

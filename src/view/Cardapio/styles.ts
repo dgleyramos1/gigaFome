@@ -5,7 +5,12 @@ import bg from '../../assert/images/bg.jpg';
 export const Container = styled.div`
     width: 100vw;
     height: auto; 
-
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 25px;
     .nav{
         display: flex;
         align-items: center;
@@ -16,7 +21,6 @@ export const Container = styled.div`
             display: flex;
             justify-content: center;
             align-items: center;         
-
             img{
                 width: 100px;
                 height: auto;
@@ -31,7 +35,6 @@ export const Container = styled.div`
         justify-content: space-evenly;
         gap: 15px;
         margin: auto;
-
         .product-content{            
             padding: 10px;
             width: 350px;
@@ -46,7 +49,6 @@ export const Container = styled.div`
             background-image: url(${bg});
             background-repeat: no-repeat;
             background-attachment: fixed;
-
             img{
                 width: 250px;
                 height: 200px;
@@ -59,7 +61,7 @@ export const Container = styled.div`
     }
   .contentBut { 
         background-color:rgba(0, 0, 0, 1);
-        width:250px;
+        width:auto;
         height:35px;
         left:10.401824951171875px;
         top:0px;
@@ -88,5 +90,36 @@ export const Container = styled.div`
         text-align:center;
         font-size:24px;
         letter-spacing:0;
+    }
+    #carrinho{
+        width: 100vw;
+        height: auto;
+        text-align: center;
+        margin-top: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        form{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            background-image: url(${bg});
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            border-radius: 25px;
+            label{
+                padding: 10px;
+            }
+            input{
+            width: 100%;
+            height: auto;
+            padding: 10px;
+            color: black;
+            }
+        }
+        
     }
 `

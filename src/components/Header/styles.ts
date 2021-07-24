@@ -1,13 +1,18 @@
 import styled from "styled-components";
+import bg from '../../assert/images/bg.jpg';
 
 
 
 export const Container = styled.div`
-    width: 100vw;
+    width: auto;
     height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    background-image: url(${bg});
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
     .list{
         display: flex;

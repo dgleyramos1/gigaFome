@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import bg from '../../assert/images/bg.jpg';
 
 export const Container = styled.div`
     width: 100vw;
@@ -7,6 +8,10 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    background-image: url(${bg});
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
     .author { 
         color:rgba(0, 0, 0, 1);

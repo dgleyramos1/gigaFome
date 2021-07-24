@@ -19,7 +19,6 @@ const Cardapio: React.FC = () => {
 
   const [ data, setData ] = useState<IProduct[]>([]);
   const [ cart, setCart ] = useState<IProduct[]>([]);
-  const [ shop, setShop ] = useState<IProduct[]>([]);
   
 
   useEffect(() =>{
@@ -34,7 +33,6 @@ const Cardapio: React.FC = () => {
     let product = data[index]
     let push: any = [...cart, cart.push(product)]
     setCart(push)
-    setShop(push)
     const productStore = JSON.stringify(cart);
     localStorage.setItem('@cart', productStore);
   }

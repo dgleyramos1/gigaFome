@@ -96,7 +96,7 @@ export const Container = styled.div`
         letter-spacing:0;
     }
     #carrinho{
-        width: 600px;
+        width: 100vw;
         height: auto;
         text-align: center;
         margin-top: 80px;
@@ -105,7 +105,7 @@ export const Container = styled.div`
         align-items: center;
 
         form{
-            width: 100%;
+            width: 50%;
             display: flex;
             flex-direction: column;
             justify-content: center;

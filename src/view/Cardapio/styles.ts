@@ -11,6 +11,10 @@ export const Container = styled.div`
     align-items: center;
     flex-direction: column;
     font-size: 25px;
+<<<<<<< HEAD
+=======
+
+>>>>>>> a4456ba1863f38a7b086dba19b059eee07cfd06e
     .nav{
         display: flex;
         align-items: center;
@@ -99,6 +103,10 @@ export const Container = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
+<<<<<<< HEAD
+=======
+
+>>>>>>> a4456ba1863f38a7b086dba19b059eee07cfd06e
         form{
             width: 50%;
             display: flex;
@@ -110,9 +118,17 @@ export const Container = styled.div`
             background-repeat: no-repeat;
             background-attachment: fixed;
             border-radius: 25px;
+<<<<<<< HEAD
             label{
                 padding: 10px;
             }
+=======
+
+            label{
+                padding: 10px;
+            }
+
+>>>>>>> a4456ba1863f38a7b086dba19b059eee07cfd06e
             input{
             width: 100%;
             height: auto;
@@ -120,6 +136,10 @@ export const Container = styled.div`
             color: black;
             }
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> a4456ba1863f38a7b086dba19b059eee07cfd06e
         
     }
 `

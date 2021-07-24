@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import bg from '../../assert/images/bg.jpg';
 
 export const Container = styled.div`
     width: 100vw;

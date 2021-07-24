@@ -100,19 +100,76 @@ export const Container = styled.div`
         justify-content: space-evenly;
         align-items: center;
         flex-flow: row wrap;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
         margin: 0;
 
         .imagContato{
-            max-width: 450px;
-            min-width: 100px;
+            width: 450px;
+            min-width: 90px;
             height: auto;
             margin-top: 10px;
+        }
+        .imgTamanho{
+            width: 100%;
+
         }
 
         form{
             max-width: 450px;
             min-width: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            background-image: url(${bg});
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            border-radius: 25px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+
+            label{
+                padding: 10px;
+            }
+            
+            input{
+            width: 100%;
+            height: auto;
+            padding: 10px;
+            color: black;
+            border-radius: 25px;
+            }
+            button{
+                margin-top: 10px;
+            }
+        }
+
+        
+    }
+
+    @media(max-width: 768px){
+        .product-content{            
+            padding: 10px;
+            width: 100%;
+            border: 1px solid black;
+            border-radius: 30px;
+            background-image: url(${bg});
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            img{
+                width: 200px;
+                height: 150px;
+                margin: 0;
+            }
+        }
+
+        .imagContato{
+            display: none;
+        }
+        form{
+            width: 100vw;
+            min-width: 100px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -136,14 +193,6 @@ export const Container = styled.div`
             button{
                 margin-top: 10px;
             }
-        }
-
-        
-    }
-
-    @media(max-width: 768px){
-        .imagContato{
-            display: none;
         }
     }
 `

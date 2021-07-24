@@ -95,7 +95,7 @@ const Cardapio: React.FC = () => {
                 </form>
                 
               <div className="imagContato">
-                <img src={contato} alt="" />
+                <img className="imgTamanho" src={contato} alt="" />
                     
               </div>                         
             </div>            

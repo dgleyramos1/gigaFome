@@ -11,7 +11,7 @@ export const Container = styled.div`
         align-items: center;
         flex-flow: wrap;
         width: 100%;
-        height: auto;
+        height: 85vh;
         margin: auto;
     }
 
@@ -25,8 +25,7 @@ export const Container = styled.div`
         height: auto;
     }
 
-    .sextouText { 
-        transform: rotate(-9.103151351662632deg);
+    .sextouText {
         color: rgba(0, 0, 0, 1);
         width: 350px;
         min-width: 120px;
@@ -81,6 +80,43 @@ export const Container = styled.div`
         height: auto;
         width: 100vw;
         margin: auto;
+    }
+}
+@media(max-width: 450px){
+    .content-one{
+        text-align: center;
+        width: 100%;
+        height: auto;
+    }
+    .sextouText {
+        width: 150px;
+        height: auto;
+        font-family: Roboto Condensed;
+        text-align: center;
+        font-size: 30px;
+        margin: 0;
+    }
+    .chamadaText { 
+        width: 150px;
+        height:auto;
+        font-family:Roboto Condensed;
+        text-align:center;
+        font-size: 10px;
+        letter-spacing:0;
+        padding: 5px;
+    }
+    .confiText { 
+        width:150;
+        height:auto;
+        text-align:center;
+        font-size: 10px;
+        letter-spacing:0;
+        padding: 10px;
+    }
+    .boxImg {
+        width:80%;
+        min-width: 170px;
+        height:auto;
     }
 }
 

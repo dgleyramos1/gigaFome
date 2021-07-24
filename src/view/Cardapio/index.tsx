@@ -5,6 +5,7 @@ import { Container } from './styles';
 import api from '../../services/api';
 import Cart from '../../assert/images/cart.png';
 import contato from '../../assert/images/contato.png';
+import { Link } from 'react-router-dom';
 
 
 
@@ -37,17 +38,16 @@ const Cardapio: React.FC = () => {
     const productStore = JSON.stringify(cart);
     localStorage.setItem('@cart', productStore);
   }
+
+
   let entradaEmail = window.document.getElementById('email');
   let entradaNome = window.document.getElementById('name');
   let entradaEndereco = window.document.getElementById('endereco');
-  let paragrafo = document.getElementById('texCadastro');
 
-  document.getElementById('botao')?.addEventListener('click', function() {  
-    let client = `${entradaNome} ${entradaEmail} ${entradaEndereco}`;
+  document.getElementById('botao')?.addEventListener('click', function() {
+      let client = `${entradaNome} ${entradaEmail} ${entradaEndereco}`;
       localStorage.setItem('@client', client);
-      let mensagem = document.createElement("p");
-      mensagem.innerText = "Você se cadastrou com sucesso!"
-      paragrafo?.appendChild(mensagem);
+      alert("Você se cadastrou com sucesso!");
   });
 
 
@@ -89,6 +89,7 @@ const Cardapio: React.FC = () => {
                   <button id="botao" className="contentBut">
                       <span className="contentText">Cadastre-se</span>
                   </button>
+                  
 
                   <p id="texCadastro"></p>                    
                       

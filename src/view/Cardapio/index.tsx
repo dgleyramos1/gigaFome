@@ -3,7 +3,7 @@ import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import { Container } from './styles';
 import api from '../../services/api';
-import Cart from '../../assert/images/cart.png'
+import Cart from '../../assert/images/cart.png';
 
 
 
@@ -85,12 +85,14 @@ const Cardapio: React.FC = () => {
 
                   <button  className="contentBut">
                       <span className="contentText">Cadastrar</span>
-                  </button>                     
+                  </button>
+
+                  <p id="texCadastro"></p>                    
                       
                 </form>
                 
               <div>
-                    <p id="texCadastro"></p>
+                    
               </div>                         
             </div>            
           <Footer/>

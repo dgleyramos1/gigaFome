@@ -11,10 +11,6 @@ export const Container = styled.div`
     align-items: center;
     flex-direction: column;
     font-size: 25px;
-<<<<<<< HEAD
-=======
-
->>>>>>> a4456ba1863f38a7b086dba19b059eee07cfd06e
     .nav{
         display: flex;
         align-items: center;
@@ -64,7 +60,7 @@ export const Container = styled.div`
         }
     }
   .contentBut { 
-        background-color:rgba(0, 0, 0, 1);
+        background-color: black;
         width:auto;
         height:35px;
         left:10.401824951171875px;
@@ -76,7 +72,7 @@ export const Container = styled.div`
         margin-bottom: 5px;
     }
     .contentBut:hover{
-        box-shadow:0 8px 9px rgba(255, 255, 255, 0.5);
+        box-shadow: white;
     }
     .contentText { 
         background-image:linear-gradient(0deg, rgba(225.00000178813934, 179.000004529953, 75.00000312924385, 1) 0%,rgba(184.00000423192978, 219.0000021457672, 54.00000058114529, 1) 100%) ;
@@ -101,14 +97,22 @@ export const Container = styled.div`
         text-align: center;
         margin-top: 80px;
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
-<<<<<<< HEAD
-=======
+        flex-flow: row wrap;
+        margin-bottom: 20px;
+        margin: 0;
 
->>>>>>> a4456ba1863f38a7b086dba19b059eee07cfd06e
+        .imagContato{
+            max-width: 450px;
+            min-width: 100px;
+            height: auto;
+            margin-top: 10px;
+        }
+
         form{
-            width: 50%;
+            max-width: 450px;
+            min-width: 250px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -118,28 +122,28 @@ export const Container = styled.div`
             background-repeat: no-repeat;
             background-attachment: fixed;
             border-radius: 25px;
-<<<<<<< HEAD
-            label{
-                padding: 10px;
-            }
-=======
 
             label{
                 padding: 10px;
             }
-
->>>>>>> a4456ba1863f38a7b086dba19b059eee07cfd06e
+            
             input{
             width: 100%;
             height: auto;
             padding: 10px;
             color: black;
             }
+            button{
+                margin-top: 10px;
+            }
         }
-<<<<<<< HEAD
-=======
 
->>>>>>> a4456ba1863f38a7b086dba19b059eee07cfd06e
         
+    }
+
+    @media(max-width: 768px){
+        .imagContato{
+            display: none;
+        }
     }
 `

@@ -4,6 +4,7 @@ import Header from '../../components/Header';
 import { Container } from './styles';
 import api from '../../services/api';
 import Cart from '../../assert/images/cart.png';
+import contato from '../../assert/images/contato.png';
 
 
 
@@ -37,15 +38,17 @@ const Cardapio: React.FC = () => {
     localStorage.setItem('@cart', productStore);
   }
 
-  const handleCadastro = (value: any) => {
-
-
-  }
-   function cadastro(){
-     let paragrafo = document.createElement("p")
-     paragrafo.innerHTML = "Dados cadastrados"
-     document.getElementById("texCadastro")?.appendChild(paragrafo)
-   }
+   var entradaEmail = document.getElementById('email');
+   var entradaNome = document.getElementById('name');
+   var entradaEndereco = document.getElementById('endereco');
+   var paragrafo = document.getElementById('texCadastro');
+   
+  document.getElementById('botao')?.addEventListener('click', function() {
+    let client = `${entradaNome.value} | ${entradaEmail.value} | ${entradaEndereco.value}`
+      localStorage.setItem('@client', client);
+      let mensagem = "Você se cadastrou com sucesso!";
+      paragrafo.innerText = mensagem;
+  });
 
 
 
@@ -71,27 +74,28 @@ const Cardapio: React.FC = () => {
               ))}
             </section>
             <div id="carrinho">
-                <form action="">
-                  <h2>Cadastro</h2>
+                <form method="POST">
+                  <h2>Cadastre-se</h2>
 
-                  <label htmlFor="name">Name</label>
-                  <input name="nome" placeholder="digite seu Nome aqui" type="text" />
+                  <label htmlFor="name">Nome Completo</label>
+                  <input name="name" id="name" placeholder="digite seu Nome aqui" type="text" />
 
                   <label htmlFor="email">E-mail</label>
-                  <input type="email" name="email" placeholder="Digite seu e-mail" />
+                  <input type="email" id="email" name="email" placeholder="Digite seu e-mail" />
 
                   <label htmlFor="endereco">Endereço</label>
-                  <input id="endereco" type="text" placeholder="Digite seu endereço" />
+                  <input id="endereco" name="endereco" type="text" placeholder="Digite seu endereço" />
 
-                  <button  className="contentBut">
-                      <span className="contentText">Cadastrar</span>
+                  <button id="botao" className="contentBut">
+                      <span className="contentText">Cadastre-se</span>
                   </button>
 
                   <p id="texCadastro"></p>                    
                       
                 </form>
                 
-              <div>
+              <div className="imagContato">
+                <img src={contato} alt="" />
                     
               </div>                         
             </div>            

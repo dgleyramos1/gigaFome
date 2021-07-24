@@ -2,12 +2,13 @@ import styled from "styled-components";
 import bg from '../../assert/images/bg.jpg';
 
 export const Container = styled.div`
-    width: 100vw;
+    width: auto;
     height: 50px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 0 25em 0 25em;
     
     background-image: url(${bg});
     background-repeat: no-repeat;

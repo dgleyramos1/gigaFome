@@ -9,6 +9,7 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 0 25em 0 25em;
     
     background-image: url(${bg});
     background-repeat: no-repeat;

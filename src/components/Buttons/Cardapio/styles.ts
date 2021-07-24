@@ -13,7 +13,7 @@ export const Container = styled.div`
         transition: 10ms;
     }
     .contentBut:hover{
-        box-shadow:0 8px 9px rgba(255, 255, 255, 0.5);
+        box-shadow: #c4cf3c;
     }
     .contentText { 
         background-image:linear-gradient(0deg, rgba(225.00000178813934, 179.000004529953, 75.00000312924385, 1) 0%,rgba(184.00000423192978, 219.0000021457672, 54.00000058114529, 1) 100%) ;

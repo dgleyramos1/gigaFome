@@ -10,8 +10,8 @@ export const Container = styled.div`
         justify-content: center;
         align-items: center;
         flex-flow: wrap;
-        width: 100vw;
-        height: 85vh;
+        width: 100%;
+        height: auto;
         margin: auto;
     }
 
@@ -29,7 +29,7 @@ export const Container = styled.div`
         transform: rotate(-9.103151351662632deg);
         color: rgba(0, 0, 0, 1);
         width: 350px;
-        min-width: 150px;
+        min-width: 120px;
         height: auto;
         font-family: Roboto Condensed;
         text-align: left;
@@ -63,7 +63,7 @@ export const Container = styled.div`
         justify-content: center;
         align-items: center;
         width: 50%;
-        min-width: 250px;
+        min-width: 150px;
         height: auto;
         margin: auto;
     }

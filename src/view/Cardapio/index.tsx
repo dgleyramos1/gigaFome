@@ -37,16 +37,17 @@ const Cardapio: React.FC = () => {
     const productStore = JSON.stringify(cart);
     localStorage.setItem('@cart', productStore);
   }
-  let entradaEmail = document.getElementById('email');
-  let entradaNome = document.getElementById('name');
-  let entradaEndereco = document.getElementById('endereco');
+  let entradaEmail = window.document.getElementById('email');
+  let entradaNome = window.document.getElementById('name');
+  let entradaEndereco = window.document.getElementById('endereco');
   let paragrafo = document.getElementById('texCadastro');
-   
-  document.getElementById('botao')?.addEventListener('click', function() {       
-    let client = `${entradaNome.value} | ${entradaEmail.value} | ${entradaEndereco.value}`;
+
+  document.getElementById('botao')?.addEventListener('click', function() {  
+    let client = `${entradaNome} ${entradaEmail} ${entradaEndereco}`;
       localStorage.setItem('@client', client);
-      let mensagem = "Você se cadastrou com sucesso!";
-      paragrafo.innerText = mensagem;
+      let mensagem = document.createElement("p");
+      mensagem.innerText = "Você se cadastrou com sucesso!"
+      paragrafo?.appendChild(mensagem);
   });
 
 
@@ -73,7 +74,7 @@ const Cardapio: React.FC = () => {
               ))}
             </section>
             <div id="carrinho">
-                <form method="POST">
+                <form>
                   <h2>Cadastre-se</h2>
 
                   <label htmlFor="name">Nome Completo</label>

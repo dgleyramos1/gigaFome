@@ -37,18 +37,18 @@ const Cardapio: React.FC = () => {
     const productStore = JSON.stringify(cart);
     localStorage.setItem('@cart', productStore);
   }
+  
 
-
-  let entradaEmail = window.document.getElementById('email');
-  let entradaNome = window.document.getElementById('name');
-  let entradaEndereco = window.document.getElementById('endereco');
+  const entradaEmail = document.getElementById('email');
+  const entradaNome = document.getElementById('name');
+  const entradaEndereco = document.getElementById('endereco');  
 
   document.getElementById('botao')?.addEventListener('click', function() {
-      let client = `${entradaNome} ${entradaEmail} ${entradaEndereco}`;
+      let client = `${entradaNome.value} | ${entradaEmail.value} | ${entradaEndereco.value}`;
       localStorage.setItem('@client', client);
+      console.log(entradaNome);
       alert("Você se cadastrou com sucesso!");
   });
-
 
 
   return(

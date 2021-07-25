@@ -49,6 +49,8 @@ export const Container = styled.div`
             background-image: url(${bg});
             background-repeat: no-repeat;
             background-attachment: fixed;
+            border-radius: 0 5rem 0 5rem;
+
             img{
                 width: 250px;
                 height: 200px;
@@ -67,12 +69,12 @@ export const Container = styled.div`
         top:0px;
         border-radius: 17px;
         cursor: pointer;
-        box-shadow:0 5px 4px rgba(0, 0, 0, 0.49000000953674316);
+        box-shadow:0 5px 4px #D97014;
         transition: 10ms;
         margin-bottom: 5px;
     }
     .contentBut:hover{
-        box-shadow: white;
+        box-shadow: 0 5px 4px #BF4904;
     }
     .contentText { 
         background-image:linear-gradient(0deg, rgba(225.00000178813934, 179.000004529953, 75.00000312924385, 1) 0%,rgba(184.00000423192978, 219.0000021457672, 54.00000058114529, 1) 100%) ;
@@ -103,6 +105,7 @@ export const Container = styled.div`
         margin-bottom: 40px;
         margin: 0;
 
+
         .imagContato{
             width: 450px;
             min-width: 90px;
@@ -128,6 +131,7 @@ export const Container = styled.div`
             border-radius: 25px;
             margin-bottom: 20px;
             margin-top: 20px;
+            border-radius: 0 5rem 0 5rem;
 
             label{
                 padding: 10px;

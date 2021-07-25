@@ -20,6 +20,7 @@ export const Container = styled.div`
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        text-align: center;
         width: 50%;
         min-width: 250px;
         height: auto;
@@ -32,7 +33,7 @@ export const Container = styled.div`
         height: auto;
         font-family: Roboto Condensed;
         text-align: left;
-        font-size: 92px;
+        font-size: 82px;
         letter-spacing: 0;
         padding: 5px;
     }
@@ -82,31 +83,32 @@ export const Container = styled.div`
         margin: auto;
     }
 }
-@media(max-width: 450px){
+/*@media(max-width: 450px){
     .content-one{
         text-align: center;
         width: 100%;
         height: auto;
     }
     .sextouText {
-        width: 150px;
+        width: 100%;
+        min-width: auto;
         height: auto;
         font-family: Roboto Condensed;
         text-align: center;
-        font-size: 30px;
+        font-size: 50px;
         margin: 0;
     }
     .chamadaText { 
-        width: 150px;
+        width: 100%;
         height:auto;
         font-family:Roboto Condensed;
         text-align:center;
-        font-size: 10px;
+        font-size: 30px;
         letter-spacing:0;
         padding: 5px;
     }
     .confiText { 
-        width:150;
+        width:100%;
         height:auto;
         text-align:center;
         font-size: 10px;
@@ -114,10 +116,10 @@ export const Container = styled.div`
         padding: 10px;
     }
     .boxImg {
-        width:80%;
+        width:100%;
         min-width: 170px;
         height:auto;
     }
-}
+}*/
 
 `

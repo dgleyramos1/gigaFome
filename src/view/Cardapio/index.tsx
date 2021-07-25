@@ -39,15 +39,15 @@ const Cardapio: React.FC = () => {
   }
   
 
-  const entradaEmail = document.getElementById('email');
-  const entradaNome = document.getElementById('name');
-  const entradaEndereco = document.getElementById('endereco');  
+  const entradaEmail = document.getElementById('email') as HTMLInputElement
+  const entradaNome = document.getElementById('nome') as HTMLInputElement
+  const entradaEndereco = document.getElementById('endereco') as HTMLInputElement 
 
   document.getElementById('botao')?.addEventListener('click', function() {
-      let client = `${entradaNome.value} | ${entradaEmail.value} | ${entradaEndereco.value}`;
+      let client = `${entradaEmail.value} | ${entradaEmail.value} | ${entradaEndereco.value}`;
       localStorage.setItem('@client', client);
       console.log(entradaNome);
-      alert("Você se cadastrou com sucesso!");
+      //alert("Você se cadastrou com sucesso!");
   });
 
 

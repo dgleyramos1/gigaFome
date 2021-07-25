@@ -5,7 +5,6 @@ import { Container } from './styles';
 import api from '../../services/api';
 import Cart from '../../assert/images/cart.png';
 import contato from '../../assert/images/contato.png';
-import { Link } from 'react-router-dom';
 
 
 
@@ -88,16 +87,11 @@ const Cardapio: React.FC = () => {
 
                   <button id="botao" className="contentBut">
                       <span className="contentText">Cadastre-se</span>
-                  </button>
-                  
-
-                  <p id="texCadastro"></p>                    
-                      
-                </form>
-                
+                  </button>                 
+                  <p id="texCadastro"></p>                   
+                </form>                
               <div className="imagContato">
-                <img className="imgTamanho" src={contato} alt="" />
-                    
+                <img className="imgTamanho" src={contato} alt="" />                    
               </div>                         
             </div>            
           <Footer/>

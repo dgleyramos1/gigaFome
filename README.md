@@ -1,3 +1,115 @@
+## Desafio 2# - Gestão de Cadastros
+
+##### 2° Entrega - Gestão de Cadastros
+
+Criação de um sistema e-commerce para inventário de produtos e dados de clientes:
+
+**Entregáveis**:
+
+- [x] Os dados de clientes, endereços e produtos devem estar devidamente estruturados
+
+- [x] Dados no localstorage
+
+- [x] Código fonte no github com o arquivo README detalhando as funcionalidades da programação
+
+
+
+## Tecnologias usadas:
+
+- React.js
+
+  `npx create-react-app`
+
+- TypeScript
+
+  Iniciando aplicação com `–template=typescript`
+
+- Styled-components
+
+  Estilização de paginas e componentes
+
+- HTML/JSX
+
+  Criação de container e conteúdos nas paginas
+
+- Javascript
+
+- Axios
+
+  `yarn add axios`
+
+  Criação de FULL REST API fake 
+
+- Json
+
+  `yarn add json-server -D`
+
+  Criação de um servidor por meio da porta 8888
+
+  Criação de objeto, com um outra array de objetos
+
+  
+
+#### O que foi feito?
+
+Foi desenvolvido um sistema de e-commerce para uma hambúrgueria, com react desenvolvemos três views, que estão interligadas por meio de rotas, utilizer o `react-router-dom` para construir a estrutura das rotas.
+
+```react
+{data.map( (prod, index) => (
+    <div className="product-content" key={prod.id}>
+        <span className="priceText">{prod.name}</span>
+        <img src={prod.photo} alt="x-salada" />
+        <span className="priceText">R${prod.price}</span>
+        <button onClick={ () => handleCart(index)} className="contentBut">
+            <span className="contentText">Comprar Agora</span>
+        </button>
+    </div>
+))}
+```
+
+Através desse código buscamos por meio do ID todos os produtos listados no server.json, e construímos todos os carts que forem precisos.
+
+```react
+const handleCart = (index: number) => {
+    let product = data[index]
+    let push: any = [...cart, cart.push(product)]
+    setCart(push)
+    const productStore = JSON.stringify(cart);
+    localStorage.setItem('@cart', productStore)
+}
+```
+
+Criamos aqui a ação de click do botão de adicionar ao carrinho, onde ele vai pegar o dado do produto através do seu index. Aqui também ele já armazena o dado no cart e em seguida na localStorage.
+
+```react
+const entradaEmail = document.getElementById('email') as HTMLInputElement
+  const entradaNome = document.getElementById('nome') as HTMLInputElement
+  const entradaEndereco = document.getElementById('endereco') as HTMLInputElement 
+
+  document.getElementById('botao')?.addEventListener('click', function() {
+      let client = `${entradaEmail.value} | ${entradaEmail.value} | ${entradaEndereco.value}`;
+      localStorage.setItem('@client', client);
+      console.log(entradaNome);
+      //alert("Você se cadastrou com sucesso!");
+  });
+```
+
+Evento de click no botão de cadastro, ele obtém os dados dos inputs e armazena no localStorage.
+
+
+```react
+import axios from 'axios';
+
+const api = axios.create({
+  baseURL: 'https://my-json-server.typicode.com/dgleyramos1/demo/produtos'
+})
+
+export default api;
+```
+
+Ele importa a tecnologia axios, e cria uma API fake com base nessa url. Criei um repositório somente para armazenar os dados para aquisição `https://github.com/dgleyramos1/demo`
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
